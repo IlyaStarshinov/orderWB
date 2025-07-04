@@ -4,7 +4,7 @@ async function getOrder() {
 
     try {
         const response = await fetch(`http://localhost:8081/order/${orderId}`);
-        if (!response.ok) throw new Error('Order not found');
+        if (!response.ok) throw new Error('Заказ не найден');
         
         const data = await response.json();
         document.getElementById('result').textContent = JSON.stringify(data, null, 2);

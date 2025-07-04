@@ -32,9 +32,9 @@ func (c *Cache) Get(uid string) (*model.Order, bool) {
 	order, exists := c.orders[uid]
 
 	if exists {
-		log.Printf("КЭШ HIT для заказа: %s", uid) // Добавлено
+		log.Printf("КЭШ HIT для заказа: %s", uid)
 	} else {
-		log.Printf("КЭШ MISS для заказа: %s", uid) // Добавлено
+		log.Printf("КЭШ MISS для заказа: %s", uid)
 	}
 
 	return order, exists

@@ -1,13 +1,94 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
-    <title>Order Info</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Информация о заказе</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #3498db;
+        }
+        
+        .search-container {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            justify-content: center;
+        }
+        
+        #orderId {
+            padding: 10px 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            width: 300px;
+            transition: border 0.3s;
+        }
+        
+        #orderId:focus {
+            border-color: #3498db;
+            outline: none;
+            box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+        }
+        
+        button {
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        
+        button:hover {
+            background-color: #2980b9;
+        }
+        
+        #result {
+            background-color: white;
+            padding: 20px;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            min-height: 100px;
+            white-space: pre-wrap;
+            font-family: Consolas, Monaco, 'Andale Mono', monospace;
+        }
+        
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+    </style>
     <script src="script.js" defer></script>
 </head>
 <body>
-    <h1>Информация об заказе</h1>
-    <input type="text" id="orderId" placeholder="Введите ID заказа">
-    <button onclick="getOrder()">Получить заказ</button>
-    <pre id="result"></pre>
+    <div class="container">
+        <h1>Информация о заказе</h1>
+        
+        <div class="search-container">
+            <input type="text" id="orderId" placeholder="Введите ID заказа">
+            <button onclick="getOrder()">Получить заказ</button>
+        </div>
+        
+        <pre id="result">Здесь будет отображена информация о заказе...</pre>
+    </div>
 </body>
 </html>
